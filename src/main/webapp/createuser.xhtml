@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+    <title>JSF remoteCommand Example</title>
+</h:head>
+<h:body>
+    <h3></h3>
+    <h:form>
+        <p:remoteCommand name="callRemoteMethod"
+                         actionListener="#{userBean.myBeanMethod}" />
+
+        <h:outputText value="Now calling myBeanMethod" />
+    </h:form>
+
+    <script type="text/javascript">
+        callRemoteMethod(); //makes a remote call of managed bean method
+    </script>
+
+</h:body>
+</html>
